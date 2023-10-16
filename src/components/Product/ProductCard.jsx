@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaPen, FaRegEye } from 'react-icons/fa';
 import { MdOutlineDeleteOutline } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -56,7 +57,7 @@ const ProductCard = ({ coffee }) => {
 						<div className=" justify-end">
 							<div className="join join-vertical space-y-2 ">
 								<button className="btn join-item text-xl bg-[#D2B48C] text-white "><FaRegEye /></button>
-								<button className="btn join-item text-lg text-white bg-[#3C393B]"><FaPen /></button>
+								<Link to={`/update/${_id}`}><button className="btn join-item text-lg text-white bg-[#3C393B]"><FaPen /></button></Link>
 								<button onClick={() => handleDelete(_id)} className="btn join-item text-xl text-white bg-[#EA4744] "><MdOutlineDeleteOutline /></button>
 							</div>
 						</div>
@@ -70,5 +71,5 @@ const ProductCard = ({ coffee }) => {
 export default ProductCard;
 
 ProductCard.propTypes = {
-	coffee: PropTypes.node.isRequired,
+	coffee: PropTypes.node
 }
