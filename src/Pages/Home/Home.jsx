@@ -1,8 +1,9 @@
+import Product from "../../components/Product/Product";
 
 const Home = () => {
 	return (
 		<div>
-			this is home
+			<Product></Product>
 		</div>
 	);
 };
