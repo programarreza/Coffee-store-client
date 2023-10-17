@@ -45,7 +45,7 @@ const ProductCard = ({ coffee }) => {
 
 	return (
 		<div>
-			<div className="card card-side bg-base-100 shadow-xl ">
+			<div className="card card-side bg-base-200 shadow-lg ">
 				<figure><img src={photo} className="w-40" alt="Movie" /></figure>
 				<div className="card-body">
 					<div className="flex justify-between">
