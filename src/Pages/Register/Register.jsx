@@ -16,6 +16,20 @@ const Register = () => {
 			.then(result => {
 				console.log(result.user);
 				alert('registration successful')
+				
+				const user = { email, createTime: result.user?.metadata?.creationTime }
+
+				fetch('http://localhost:5000/user', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(user)
+				})
+					.then(res => res.json())
+					.then(data => {
+						console.log(data);
+					})
 			})
 			.catch(error => {
 				console.log(error);
